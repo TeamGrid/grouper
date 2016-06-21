@@ -1,0 +1,20 @@
+dependencies:
+  cache_directories:
+    - ~/.meteor
+    - ./node_modules
+  override:
+    - which meteor || sudo cp ~/.meteor/meteor_saved /usr/local/bin/meteor || curl https://install.meteor.com | /bin/sh
+    - cp /usr/local/bin/meteor ~/.meteor/meteor_saved
+    - meteor update --release=1.3.3.1
+    - npm install spacejam
+
+test:
+  override:
+    - ./node_modules/spacejam/bin/spacejam test-packages ./
+
+deployment:
+  production:
+    branch: "master"
+    commands:
+      - echo $METEOR_TOKEN > deployment_token.json
+      - meteor publish || meteor publish --create
