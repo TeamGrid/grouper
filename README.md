@@ -1,4 +1,4 @@
-# teamgrid:grouper [![Circle CI](https://circleci.com/gh/teamgrid/grouper.svg)](https://circleci.com/gh/teamgrid/grouper)
+# teamgrid:grouper [![Circle CI](https://circleci.com/gh/TeamGrid/grouper.svg)](https://circleci.com/gh/TeamGrid/grouper)
 simple package for grouping and sorting arrays
 
 ## Installation
