@@ -16,5 +16,6 @@ deployment:
   production:
     branch: "master"
     commands:
+      - rm -rf ./node_modules
       - echo $METEOR_TOKEN > deployment_token.json
       - meteor publish || meteor publish --create
