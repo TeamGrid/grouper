@@ -18,4 +18,4 @@ deployment:
     commands:
       - rm -rf ./node_modules
       - echo $METEOR_TOKEN > deployment_token.json
-      - meteor publish || meteor publish --create
+      - meteor publish || meteor publish --create || echo "This version was already published. Please increase the version number in the package.js"
